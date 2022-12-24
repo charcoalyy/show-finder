@@ -5,8 +5,10 @@ const ShowCard = ({name, desc, image}) => {
                 <img src={image}></img>
             </div>
             <div className="show-card-text">
-                <h4>{name}</h4>
-                <p>{desc}</p>
+                <div className="show-card-text-container">
+                    <h4>{name}</h4>
+                    <p>{desc}</p>
+                </div>
             </div>
         </div>
     )

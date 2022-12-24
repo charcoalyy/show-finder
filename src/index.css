@@ -37,6 +37,7 @@
   display: flex;
   overflow: scroll;
   padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .show-card-section-title {
@@ -62,11 +63,31 @@
 }
 
 .show-card-text {
-  padding: 1.5rem;
+  overflow: scroll;
+  display: flex;
+}
+
+.show-card-text-container {
+  height: 142.5px;
+  margin: 1.5rem;
   overflow: scroll;
 }
 
 .show-card-text p {
   font-size: 12px;
-  padding-bottom: 1.5rem;
+}
+
+
+.dropdown-select {
+  margin-bottom: 0.25rem;
+}
+
+.dropdown-label {
+  cursor: pointer;
+  background-color: rgb(227, 227, 227);
+}
+
+.dropdown-item {
+  cursor: pointer;
+  background-color: rgb(244, 244, 244)
 }
