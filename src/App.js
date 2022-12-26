@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <Routes>
           <Route path="/" element={<Discover />}></Route>
           <Route path="/forum" element={<Forum />}></Route>
