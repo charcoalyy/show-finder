@@ -1,2 +1,2 @@
 # 観る
-An anime finder based on a comprehensive tagging system
+a way to find new anime based on a comprehensive tagging system
