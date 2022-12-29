@@ -6,6 +6,16 @@ const SearchResults = ({ ogList }) => {
     const { filters } = useContext(FilterContext);
     const [ filteredList, setFilteredList ] = useState(null);
 
+    const sortShows = (showList) => {
+        const sortedList = Object.entries(showList).sort((current, next) => {
+            return current[1].watchCount - next[1].watchCount
+        })
+
+        sortedList.map((showData) => {
+            console.log(showData[1].title)
+        })
+    }
+
     useEffect(() => {
         const add = filters.include;
         const remove = filters.exclude;
