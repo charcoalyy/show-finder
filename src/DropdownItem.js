@@ -1,5 +1,5 @@
 import { useContext, memo } from "react";
-import FilterContext from "./FilterContext";
+import { FilterContext } from "./Discover";
 
 const DropdownItem = ({item, under}) => {
     const { filters, setFilters } = useContext(FilterContext);

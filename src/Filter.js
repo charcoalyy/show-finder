@@ -1,14 +1,10 @@
-import { Fragment, useState } from "react"
+import { Fragment, useContext } from "react"
 import DropdownSelect from "./DropdownSelect"
-import FilterContext from "./FilterContext"
+import { FilterContext } from "./Discover"
 
 const Filter = () => {
 
-    const [ filters, setFilters ] = useState({
-        include: [],
-        exclude: [],
-        sort: null
-    })
+    const { filters, setFilters } = useContext(FilterContext);
 
     const handleSubmit = (e) => {
         e.prevent.default()
@@ -21,7 +17,6 @@ const Filter = () => {
                 <h3>Find something new</h3>
                 <input type="text" name="keyword" placeholder="Enter keyword(s), separated by a comma and a space"></input>
 
-            <FilterContext.Provider value={{filters, setFilters}}>
                 <h3>Include</h3>
                     <DropdownSelect under="include" label="Genres" items={["Fantasy", "Action", "Romance", "Horror"]} />
                     <DropdownSelect under="include" label="Tags" items={["Major Character Death", "Gore", "Angst", "Enemies to Lovers"]} />
@@ -40,7 +35,6 @@ const Filter = () => {
                     <option>Watch count</option>
                     <option>Publication date</option>
                 </select>
-            </FilterContext.Provider>
             </form>
         </Fragment>
     )
